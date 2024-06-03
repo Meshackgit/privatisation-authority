@@ -8,7 +8,7 @@
         <meta content="Construction Company Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="img/icon.jpg" rel="icon">
+        <link href="img/icon.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -49,6 +49,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">About</a>
                         </li>
+
+                        <li><a href="https://privatisation.go.ke/wp-content/uploads/2023/11/APPROVED-AUTHORITY-SERVICE-CHARTER-07022024.pdf" target="_blank">Service Chater</a></li>
+                        <li><a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-STRATEGIC-PLAN-2022.2027-1-1.pdf" target="_blank"></a>Strategic Plan</li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">Team</a>
                         </li>
@@ -274,11 +277,56 @@
         max-width: 100%;
         height: auto;
     }
+
+    .view-profile-btn {
+        background-color: #E42130;
+        color: #ffffff;
+        border: none;
+        padding: 2.5px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
     
     @media (max-width: 576px) {
         .service-section {
             height: 60vh; /* Adjust height for smaller screens */
         }
+    }
+
+     /* Popup Styles */
+     .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background-color: #ffffff;
+        max-width: 1300px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        position: relative;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #777;
+        font-size: 20px;
+        transition: color 0.3s;
+    }
+
+    .close-btn:hover {
+        color: #333;
     }
 </style>
 
@@ -290,86 +338,265 @@
 
             
           
-<!-- Team Section Start -->
+<style>
+    body {
+        
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .team {
+        padding: 50px 0;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header p {
+        margin: 0;
+        font-size: 24px;
+        color: #24702A;
+    }
+
+    .section-header h2 {
+        margin: 10px 0;
+        font-size: 32px;
+    }
+
+    .team-item {
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .team-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        border: 5px solid #24702A;
+    }
+
+    .team-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .team-text {
+        margin-top: 15px;
+    }
+
+    .team-text h2 {
+        font-size: 20px;
+        color: #ffffff;
+    }
+
+    .team-text p {
+        font-size: 16px;
+        color: #ffffff;
+    }
+
+    .view-profile-btn {
+        background-color: #E42130;
+        color: #ffffff;
+        border: none;
+        padding: 2.5px 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .view-profile-btn:hover {
+        background-color: #d1182b;
+    }
+
+    .team-social {
+        margin-top: 15px;
+    }
+
+    .team-social a {
+        margin: 0 5px;
+        color: #666;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .team-social a:hover {
+        color: #24702A;
+    }
+
+    @media (max-width: 768px) {
+        .team-item {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .team-item {
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .team-img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+</style>
+
 <div class="team">
-    <div class="container">
-        <div class="section-header text-center">
-            <p style="color: #24702A;">Our Board Members</p>
-            <h2>Meet Our Team</h2>
+<div class="container">
+    <div class="section-header text-center">
+        <p style="color: #24702A;">Our Management</p>
+        <h2>Meet Our Management Team</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/JOSEPH.png" alt="Dr. Joseph Koskey">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Dr. Joseph Koskey</h2>
+                    <p>Managing Director/CEO</p>
+                    <button class="view-profile-btn" onclick="openPopup(0)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="img/md.jfif" alt="Team Image">
-                    </div>
-                    <div class="team-text">
-                        <h2>Dr. Joseph Koskey</h2>
-                        <p>Managing Director</p>
-                    </div>
-                    <div class="team-social">
-                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/Donna-Portrait-2022-Resized-28112022_0-320x320-1-150x150.jpg" alt="Donna Atieno">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Donna Atieno</h2>
+                    <p>Director, Corporate Services</p>
+                    <button class="view-profile-btn" onclick="openPopup(1)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="img/maddir.png" alt="Team Image">
-                    </div>
-                    <div class="team-text">
-                        <h2>Donna Atieno</h2>
-                        <p>Director</p>
-                    </div>
-                    <div class="team-social">
-                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/BENARD.jpg" alt="Dr. Bernard Kirui">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Dr. Bernard Kirui</h2>
+                    <p>Director, Transactions Services</p>
+                    <button class="view-profile-btn" onclick="openPopup(2)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="img/dir1.jfif" alt="Team Image">
-                    </div>
-                    <div class="team-text">
-                        <h2>Benard Kirui</h2>
-                        <p>Director</p>
-                    </div>
-                    <div class="team-social">
-                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/Ms._Irene_Kamunges_pc_ke_0-272x300.png" alt="Ms. Irene Kamunge">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Ms. Irene Kamunge</h2>
+                    <p>Manager, Supply Chain Management</p>
+                    <button class="view-profile-btn" onclick="openPopup(3)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="team-item">
-                    <div class="team-img">
-                        <img src="img/dir2.jfif" alt="Team Image">
-                    </div>
-                    <div class="team-text">
-                        <h2>Sylvester Kamau</h2>
-                        <p>Chairman</p>
-                    </div>
-                    <div class="team-social">
-                        <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                    </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/SYLVERSTETR.jpg" alt="Sylvester Kamau">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Sylvester Kamau</h2>
+                    <p>Mgr, Supply Chain Mgmt</p>
+                    <button class="view-profile-btn" onclick="openPopup(4)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/ciff_0-300x268.png" alt="Mr. Clive Kinoti">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;">Mr. Clive Kinoti</h2>
+                    <p>Manager, Internal Audit</p>
+                    <button class="view-profile-btn" onclick="openPopup(5)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-item">
+                <div class="team-img">
+                    <img src="img/Jemimah-Profile-320x320.png" alt="Ms. Jemimah Muraya">
+                </div>
+                <div class="team-text">
+                    <h2 style="color: #ffffff;"> Jemimah Muraya</h2>
+                    <p>Mgr, Research & Planning</p>
+                    <button class="view-profile-btn" onclick="openPopup(6)">View Profile</button>
+                </div>
+                <div class="team-social">
+                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Team Section End -->
+</div>
 
             
 
@@ -580,7 +807,87 @@
 </div>
 <!-- Recent Activities End -->
 
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-name" style="color: #000000;"></h2>
+        <p id="popup-role" style="color: #000000;"></p>
+        <p id="popup-info" style="color: #000000;"></p>
+    </div>
+</div>
 
+  <!-- JavaScript -->
+  <script>
+    const members = [
+    {
+        name: "DR. JOSEPH KOSKEY",
+        role: "Managing Director/CEO",
+        info: "Joseph holds a PhD in Business Administration, MBA (Strategic Management) and Bachelor of Commerce (Accounting) degrees from the University of Nairobi. He is a Certified Public Accountant, Certified Investment and Financial Analyst. He is a member of ICPAK, the Institute of Certified Secretaries of Kenya and the Institute of Directors Kenya. He is also a certified trainer on corporate governance. Joseph has over 26 years business management experience gained in diverse industries, 19 years of which have been in senior leadership and management positions. He has a distinguished leadership career with a proven track-record of achievements (both in the private and public sectors) in revenue growth, productivity improvement, operational excellence and bottom-line turnaround. He is respected for a strong work-ethic and irreproachable integrity. Prior to his appointment, Joseph had served as the Group CEO at Sovereign Group Ltd, Managing Director at the Kenya Bureau of Standards and as Managing Director at Urgent Cargo Handling Ltd among others. He has also served as the Regional Change Manager for P&O Nedlloyd East Africa and Indian Ocean Islands covering Kenya, Uganda, Tanzania, Mauritius, Madagascar & Seychelles. This background equipped him with invaluable skills and expertise in strategic and financial management, business restructuring and change management."
+        
+    },
+        {
+            name: "MS. DONNA ATIENO",
+            role: "DIRECTOR, CORPORATE SERVICES.",
+            info: "Ms. Donna holds a Master of Science in Development Finance from Strathmore University and a Master of Business Administration (Finance) from Kenya Methodist University. She also graduated from Moi University with a Bachelor of Business Management (Accounting) degree and is a Certified Public Accountant of Kenya (CPA-K) registered with the Institute of Certified Public Accountants of Kenya (ICPAK). She is also a Certified Retirement Benefits Trustee. Donna has over 15 years of experience in Public Service, more than half of which have been in a senior management role. She is a strategic leader with vast experience in public financial management; public sector financial reporting; project appraisal, profiling, and risk analysis; government policies and guidelines in human resource management and administration; and pension administration."
+        
+        },
+        {
+            name: "DR. BERNARD KIRUI",
+            role: "Director, Transactions Services",
+            info: "Dr. Bernard Kirui holds a PhD in Economics from the University of Nairobi, a Master’s degree in Economics, and a Bachelor’s in Economics and Statistics from Kenyatta University. He is a Certified Public Accountant and a member of the Institute of Certified Public Accountants of Kenya (ICPAK). Prior to joining the Commission, Dr. Kirui held various management roles at the Kenya Revenue Authority as Manager in charge of Surveys and Business Analysis and as a Manager in charge of Strategy and Policy Analysis. He was responsible for coordinating the preparation of key tax policy documents, overseeing financial analysis, providing technical support, monitoring tax policy developments and stakeholder engagement. Prior to joining the KRA, Dr. Kirui worked as a Part-Time Lecturer at the National Youth Service and in various roles at the Co-operative Bank of Kenya. He also worked as a Part-Time Lecturer for International Trade and Economics at Moi University, Nairobi Campus. Dr. Kirui was also a CSAE Visiting Fellow at the University of Oxford in the United Kingdom, where he worked on his research."
+        },
+        
+        {
+            name: "MS. IRENE KAMUNGE",
+            role: "Manager, Supply Chain Management",
+            info: ""
+        },
+        {
+            name: "MR.SYLVESTER KAMAU",
+            role: "Alternate To The Attorney-General",
+            info: "Sylvester holds a Master of Science (MSc) degree in Procurement and Logistics from the Jomo Kenyatta University of Agriculture and Technology and a CIPS post-graduate professional diploma in Procurement and Supply. He also holds a Bachelor of Arts degree in Government and Public Administration from Moi University. He is a registered and licensed member of the Kenya Institute of Supplies Management. Sylvester has over 20 years’ experience in Supply Chain Management, having worked for various organizations in different capacities. He also has vast knowledge in public procurement. Currently, Sylvester is pursuing his Doctor of Philosophy degree in Supply Chain Management from the Jomo Kenyatta University of Agriculture and Technology and is working on his dissertation after successfully completing the coursework."
+        },
+        {
+            name: "MR. CLIVE KINOTI NJIRU",
+            role: "Manager, Internal Audit",
+            info: "Clive holds a Master of Commerce in Finance from Strathmore University and a Bachelor of Arts in Economics and Business Studies from Kenyatta University. He is a member of the Institute of Certified Public Accountants of Kenya (ICPAK), Institute of Internal Auditors (IIA), and Institute of Certified Investment and Financial Analysts (CIFA). He has over fifteen (15) years of experience in Governance, Risk Management, and Compliance. Before joining the Commission, Clive held several Senior Management positions at East African Portland Cement Plc and the Ministry of Co-operatives and Micro, Small and Medium Enterprises (MSME) Development."
+        },
+        {
+            name: "MS. JEMIMAH MURAYA",
+            role: "Manager, Research & Planning",
+            info: "Ms. Jemimah Muraya is a statistician by profession who holds a Master of Science (MSc) degree in Social Statistics from the University of Nairobi. She has a Bachelor of Science degree in Applied Statistics from Maseno University and is currently pursuing a Master of Business Administration degree (Strategic Management) in USIU-A. Prior to joining the Commission, Ms. Jemimah held various management roles including Manager Research, Strategy and Planning at Tana Water Works Development Agency and Research and Policy Manager at the NGOs Co-ordination Board. She has vast experience in Research, Data Management, Strategic Planning, Performance Management, Quality Management Systems, Monitoring, and Evaluation drawn from over 14 years of experience with several public sector organizations."
+        },
+        {
+            name: "DR. EDWARD N. KOBUTHI",
+            role: "Board Member",
+            info: "Edward has a Food Process Engineering background and is a Brewmaster from VLB, Faculty of Brewing and Distillation of the Technical University Berlin, Germany. He holds a PhD in Corporate Governance an MBA in Strategic Management, a B.Sc in Marketing and Finance and the Diploma Master Brewer from the Institute of Brewing, London. He has served as CEO at AMREF’s Lomidat Meat Processors, General Manager at Kenya Airways, and General Manager at Kenya Airports Authority. He served as Project Manager, Supply Chain Manager, Bottling Manager and Distribution Manager at East African Breweries Limited. He sits on the Water Services Regulatory Board in addition to the boards of several schools."
+        },
+        {
+            name: "CELINE ANYANGO ORATA",
+            role: "Board Member",
+            info: "Celine has a Bachelor of Arts degree in Business Administration from the University of Zambia and is an accomplished banker, company director, board member and professional mediator, experienced in building company infrastructure from the ground-up, spearheading strategy planning and development, operational and business excellence, and compliance with various trainings in Banking, Finance, Credit and Risk Management. She has wide banking experience spanning over 27 years both locally and internationally and over 6 years in board membership in Kenya Women Finance Trust; currently Kenya Women Microfinance Bank; as well as a Treasurer and Board Member of the Kenya Girl Guides Association for a period of 6 years. She is the current chairperson of the Barclays Bank Pensions SACCO and a Director at Suave Investments Limited. She has also been involved in community engagements which involves coaching, mentoring, advocacy, health promotions; and women and youth empowerment."
+        },
+        {
+            name: "IRENE NJERI WANYOIKE",
+            role: "Commission Member",
+            info: "Irene is a seasoned and passionate professional with a career spanning over 15 years in alternative dispute resolution mechanisms with an emphasis on Mediation, Law and Governance. She has a Master’s degree in Diplomacy and Foreign Policy from Moi University, a Post Graduate diploma in Law from the Kenya School of Law and a Bachelors of Law from the University of Nairobi. In her vast experience working with the Judiciary, National Cohesion and Integration Commission and the Association of Professional Societies in East Africa, Irene has interacted extensively with the three Arms of Government, Security, Provincial Administration, county governments and the local grassroots leadership, which has enlarged her networks and given her a rich understanding of the public sector. Irene is also knowledgeable in the field of Public Sector Reforms, Governance, Human Rights, and is very passionate about issues of Women and Youth Empowerment."
+        },
+       
+    ];
+
+    function openPopup(index) {
+        const member = members[index];
+        document.getElementById('popup-name').innerText = member.name;
+        document.getElementById('popup-role').innerText = member.role;
+        document.getElementById('popup-info').innerText = member.info;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
 
 <!-- Footer Start -->
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
