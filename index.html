@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top" style="height: 85px;">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="img/PA logo.png" alt="Privatisation Authority Logo" style="height: 120px; margin-right: 10px;">
+                    <img src="img/PA logo.png" alt="Privatisation Authority Logo" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +43,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html"  style="color: #000000;">HOME</a>
+                            <a class="nav-link" href="index.html" style="color: #000000;">HOME</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button"  style="color: #000000;">
+                            <a class="nav-link dropdown-toggle" id="whoWeAreDropdown" role="button" style="color: #000000;">
                                 WHO WE ARE <i class="fas fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
@@ -58,7 +58,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button"  style="color: #000000;">
+                            <a class="nav-link dropdown-toggle" id="privatisationDropdown" role="button" style="color: #000000;">
                                 PRIVATISATION <i class="fas fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="privatisationDropdown">
@@ -74,7 +74,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button"  style="color: #000000;">
+                            <a class="nav-link dropdown-toggle" id="opportunitiesDropdown" role="button" style="color: #000000;">
                                 OPPORTUNITIES <i class="fas fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="opportunitiesDropdown">
@@ -84,7 +84,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button"  style="color: #000000;">
+                            <a class="nav-link dropdown-toggle" id="informationCentreDropdown" role="button" style="color: #000000;">
                                 INFORMATION CENTRE <i class="fas fa-caret-down"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="informationCentreDropdown">
@@ -101,7 +101,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html"  style="color: #000000;">CONTACT US</a>
+                            <a class="nav-link" href="contact.html" style="color: #000000;">CONTACT US</a>
                         </li>
                     </ul>
                 </div>
@@ -109,63 +109,83 @@
         </nav>
         
         <style>
-            .navbar-nav .dropdown:hover>.dropdown-menu {
+            .navbar-nav .dropdown:hover > .dropdown-menu {
                 display: block;
                 background-color: #24702A;
             }
+        
             .navbar-nav .dropdown-menu .dropdown-item {
-                color: #ffffff; /* Change dropdown item text color to white */
+                color: #ffffff;
             }
+        
             .navbar-nav .dropdown-menu .dropdown-item:hover {
-                background-color: #000000; /* Change background color of dropdown items on hover */
-                color: #ffffff; /* Ensure text color remains white on hover */
+                background-color: #000000;
+                color: #ffffff;
             }
+        
             .navbar-nav .dropdown-toggle::after {
                 content: none;
             }
+        
             .nav-link {
                 position: relative;
             }
+        
             .nav-link .fas {
                 margin-left: 5px;
             }
+        
             .nav-item.dropdown:hover .nav-link {
-                color: #ffffff; /* Change text color to white on hover */
-                background-color: #24702A; /* Change background color on hover */
+                color: #ffffff;
+                background-color: #24702A;
             }
         
-            .navbar-brand img {
-                height: 120px; /* Retain original logo height */
-                margin-right: 10px; /* Optional margin for logo */
-                margin-top: -10px; /* Add margin to the top of the logo */
+            .navbar-brand .logo {
+                height: 120px;
+                margin-right: 10px;
+                margin-top: -5px;
             }
         
             @media (max-width: 991.98px) {
                 .navbar-collapse {
                     position: absolute;
-                    top: 100%; /* Adjust dropdown position */
+                    top: 100%;
                     left: 0;
                     width: 100%;
                     background-color: #fff;
-                    padding: 10px 0; /* Adjust padding */
+                    padding: 10px 0;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                     display: none;
                 }
-                .navbar-brand img {
-                    margin-top: -30px; /* Add margin to the top of the logo */
-                }
+        
                 .navbar-collapse.show {
                     display: block;
                 }
+        
                 .navbar-nav {
                     flex-direction: column;
-                    align-items: flex-start; /* Align items to the left */
+                    align-items: flex-start;
                 }
+        
                 .navbar-nav .nav-link {
-                    margin: 10px 0; /* Adjust vertical spacing */
-                    text-align: left; /* Align text to the left */
+                    margin: 10px 0;
+                    text-align: left;
                 }
             }
+        
+            @media (max-width: 767.98px) {
+                .navbar-brand .logo {
+                    height: 80px; /* Adjust logo height for small screens */
+                    margin-top: -10px;
+                }
+            }
+            @media (max-width: 1024px) {
+                .navbar-brand .logo {
+                    height: 100px; /* Adjust logo height for tablets */
+                    margin-top: -20px;
+                }
+            }
+        
         </style>
         
         <script>
@@ -181,6 +201,7 @@
         
         <!-- Make sure to include Font Awesome for the dropdown icons -->
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        
         
     
             <!-- Carousel Start -->
@@ -478,11 +499,13 @@
         .team-item {
             padding: 20px;
             margin-bottom: 20px;
+
         }
 
         .team-img {
             width: 120px;
             height: 120px;
+            
         }
     }
 
