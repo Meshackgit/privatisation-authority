@@ -308,184 +308,174 @@
 
 <!-- Make sure to include Font Awesome for the dropdown icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        
+
+<style>
+    .container1 {
+        padding: 20px;
+    }
+    .card {
+        border: 1px solid #dee2e6;
+        border-radius: 10px; /* Added border radius */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .card-header {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        border-top-left-radius: 10px; /* Added border radius for top left corner */
+        border-top-right-radius: 10px; /* Added border radius for top right corner */
+        padding: 10px; /* Added padding for inner content */
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+    .card-body {
+        background-color: #ffffff; /* Set background color */
+        padding: 20px; /* Added padding for inner content */
+    }
+    .table-responsive {
+        margin-top: 20px;
+    }
+    .table th, .table td {
+        text-align: center;
+    }
+    .no-results {
+        text-align: center;
+        font-style: italic;
+    }
+    @media (max-width: 768px) {
+        .container1 {
+            padding: 10px;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .container1 {
+            padding: 15px;
+        }
+    }
+    /* Added styles for title and input fields */
+    .input-container {
+        border: 1px solid red;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 20px; /* Added margin bottom for spacing */
+    }
+</style>
+</head>
+<body>
+
+
     <style>
-        .title {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin: 20px 0;
-            text-decoration: underline;
+        .section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
-        .tab-container {
+
+        .company {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .details {
             display: flex;
-            background-color: #f1f1f1;
-            justify-content: center;
-            flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+            flex-direction: column;
+            gap: 10px;
         }
-        .tab {
-            flex: 1;
-            max-width: 200px;
-            padding: 10px 12px;
-            text-align: center;
+
+        .btn {
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 10px;
             cursor: pointer;
-            background-color: #ff4d4d;
-            color: white;
-            border: 1px solid #ccc;
-            border-bottom: none;
-            transition: background-color 0.3s, color 0.3s;
+            flex: 1;
         }
-        .tab:hover {
-            background-color: white;
-            color: #ff4d4d;
+
+        .btn-container {
+            display: flex;
+            gap: 10px;
         }
-        .tab-content {
+
+        .content {
+            margin-top: 10px;
+        }
+
+        .content.hidden {
             display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-top: none;
-            text-align: left; /* Ensure all text starts from the left */
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .tab-content h2,
-        .tab-content p,
-        .tab-content ul {
-            margin-left: 0; /* Ensure text aligns to the left */
-        }
-        .tab-content h2 {
-            margin-top: 0; /* Optional: Reduce margin-top for headings */
-        }
-    
-        /* Responsive styling */
-        @media screen and (max-width: 768px) {
-            .tab {
-                flex: 1 1 100%; /* Make tabs take full width on smaller screens */
-                max-width: 200px; /* Remove max-width */
-                margin-top: 20px;
-            }
         }
     </style>
+</head>
+<body>
+    <div class="section">
+        <div class="company">
+            <h3>Kenya Wine Agencies (KWAL) Ltd.</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content1')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content2')">Status</button>
+                    <button class="btn" onclick="toggleContent('content3')">Contact</button>
+                </div>
+                <div id="content1" class="content">To ensure its continued viability; Bring a Strategic Partner on board to obviate pressure from current suppliers.</div>
+                <div id="content2" class="content hidden">Status details for Kenya Wine Agencies (KWAL) Ltd.</div>
+                <div id="content3" class="content hidden">Contact details for Kenya Wine Agencies (KWAL) Ltd.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>Tourism Finance Corporation (TFC) Hotels</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content4')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content5')">Status</button>
+                    <button class="btn" onclick="toggleContent('content6')">Contact</button>
+                </div>
+                <div id="content4" class="content">To mobilize resources to rehabilitate and modernize existing facilities.</div>
+                <div id="content5" class="content hidden">Status details for Tourism Finance Corporation (TFC) Hotels.</div>
+                <div id="content6" class="content hidden">Contact details for Tourism Finance Corporation (TFC) Hotels.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>Public Sector Owned/Controlled Sugar Companies</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content7')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content8')">Status</button>
+                    <button class="btn" onclick="toggleContent('content9')">Contact</button>
+                </div>
+                <div id="content7" class="content">To mobilize resources to rehabilitate and modernize sugar milling facilities to enhance their efficiency and competitiveness.</div>
+                <div id="content8" class="content hidden">Status details for Public Sector Owned/Controlled Sugar Companies.</div>
+                <div id="content9" class="content hidden">Contact details for Public Sector Owned/Controlled Sugar Companies.</div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>National Bank of Kenya (NBK) Ltd</h3>
+            <div class="details">
+                <div class="btn-container">
+                    <button class="btn" onclick="toggleContent('content10')">Objectives</button>
+                    <button class="btn" onclick="toggleContent('content11')">Status</button>
+                    <button class="btn" onclick="toggleContent('content12')">Contact</button>
+                </div>
+                <div id="content10" class="content">To mobilize necessary resources to support the bank’s future growth, support the growth and stability of the financial sector.</div>
+                <div id="content11" class="content hidden">Status details for National Bank of Kenya (NBK) Ltd.</div>
+                <div id="content12" class="content hidden">Contact details for National Bank of Kenya (NBK) Ltd.</div>
+            </div>
+        </div>
+    </div>
 
-    <div class="title">PRIVATIZATION PROGRAMME</div>
-<div class="tab-container">
-    <div class="tab" onclick="showContent('overview')">Overview</div>
-    <div class="tab" onclick="showContent('benefits')">Benefits of Privatization</div>
-    <div class="tab" onclick="showContent('methods')">Methods of Privatization</div>
-    <div class="tab" onclick="showContent('approved')">Approved Privatizations</div>
-    <div class="tab" onclick="showContent('status')">Privatization Status</div>
-</div>
-
-<div id="overview" class="tab-content">
-    <h2>Overview</h2>
-    <p>After Kenya’s independence in 1963, the establishment of the parastatals was driven by a national desire to:</p>
-    <ul>
-        <li>Accelerate economic social development;</li>
-        <li>Redress regional economic imbalances;</li>
-        <li>Increase Kenyan Citizen’s participation in the economy;</li>
-        <li>Promote indigenous entrepreneurship;</li>
-        <li>Promote foreign investments (through joint ventures).</li>
-    </ul>
-    <p>This desire was expressed in the Sessional Paper No. 10 of 1965 on African Socialism and its application to planning in Kenya.</p>
-    <h3>REVIEW OF THE PUBLIC ENTERPRISES PERFORMANCE</h3>
-    <p>A comprehensive review of the Public Enterprises Performance was carried out in 1979 (the Report on the Review of Statutory Boards) and 1982 (the Report of the Working Party on Government Expenditures). The Report on Review of Statutory Boards pointed out that:</p>
-    <ul>
-        <li>The growth in the parastatal sector had not been accompanied by development of efficient systems to ensure that the sector plays its role in an efficient manner;</li>
-        <li>There was clear evidence of prolonged inefficiency, financial mismanagement, waste and malpractices in many parastatals;</li>
-        <li>Government investments had largely been at the initiative of private promoters with government being brought in either as an indispensable partner or to undertake rescue measures;</li>
-        <li>Many of the parastatals had moved away from their primary functions, especially the regulatory boards most of which had translated their regulatory role into executive one, resulting in waste and confusion;</li>
-        <li>There was danger of over-politicizing production and distribution through establishment of too many parastatals.</li>
-    </ul>
-    <p>The Report on the Working Party on Government Expenditures concluded that productivity of state corporations was quite low while at the same time they continued to absorb an excessive portion of the budget, becoming a principal cause of long-term fiscal problem. The report observed that:</p>
-    <ul>
-        <li>Nationalization had remained merely presentational through government ownership;</li>
-        <li>State corporations’ operations had become inefficient and unprofitable, partly due to multiplicity of objectives;</li>
-        <li>Existence of parastatals in commercial activities had stifled private sector initiatives; and</li>
-        <li>Many of the joint ventures had failed, requiring the Government to shoulder major financial burden.</li>
-    </ul>
-    <p>The Report on the Working Party on Government Expenditures concluded that some of the resources diverted to the government to finance the state corporations’ activities could have contributed more to national development if these state corporations were left in the private sector. The report recommended that:</p>
-    <ul>
-        <li>The Government should act as a creator of favourable setting within which people can develop themselves and the economy</li>
-        <li>The Government should divest from its investments in commercial and industrial enterprises to transfer active participation to more Kenyans through participation in shareholding</li>
-        <li>The Government should reduce exposure to risk in areas in which the Private Sector can assume risk without government intervention</li>
-        <li>The Government should dismantle some of the existing administrative hurdles which discourage private sector initiative and provide needless opportunities for corruption</li>
-        <li>The Government should reorganize legal and institutional framework regarding monitoring and supervision of parastatals.</li>
-    </ul>
-    <p>Following the two reviews a number of measures were put in place. One of the measures was the enactment of the State Corporations Act. However, although this was a major attempt to streamline the management of the state corporations, the performance of most of the corporations continued to deteriorate. One reason is the continued reliance on limited public sector financing. The state corporations continued relying on public sector financing which was not adequate to meet all the sector’s needs. They continued to be financed from loans borrowed by the government and/or channeled through them as government equity; loans borrowed by the enterprises on government guarantees which in most cases ended up being repaid by the Treasury when the corporations defaulted; funds provided directly by the Treasury as grants or equity; or through internally generated funds. The internally generated funds were, however, inadequate due to huge debt burdens, tariffs that were below cost recovery levels, over employment, which caused most of the revenue to be used in payment of salaries, non-viable ventures which siphoned away resources from the enterprises, corruption and mismanagement in general. In addition most of the parastatals were under capitalization from the time of incorporation as they were mainly financed from loans without due regard to the establishment of a strong financial base. Most of them also continued to spread their resources thinly due to multiplicity of objectives and poor accountability.</p>
-    <p>In July 1992, through the issuance of the Policy Paper on Public Enterprise Reform and Privatization, the Government outlined the scope of the Public Sector Reform Programme the institutional framework and the guidelines and procedures for privatizing Public Enterprises (PEs). The Policy Paper identified 240 commercial PEs with public sector equity participation and classified them into two categories:</p>
-    <ul>
-        <li>207 Non strategic commercial PEs which were to be privatized; and</li>
-        <li>33 Strategic Commercial PEs which were to be re-structured and retained under public sector control.</li>
-    </ul>
-    <p>By the end of the first phase of the privatization programme in 2002, most of the non-strategic commercial enterprises had either been fully or partially privatized. At that time, the direction of thinking regarding restructuring and retention of a number of strategic corporations under Government operation and control had also changed due to:</p>
-    <ul>
-        <li>Inadequacy of public resources to finance the requisite investment in infrastructure facilities;</li>
-        <li>The need to arrest continued deterioration in infrastructure services;</li>
-        <li>Lesson from other countries which had succeeded in improving their infrastructure services through Public Private Partnerships; and</li>
-        <li>Restructuring which resulted in separation of commercial activities from regulatory functions, making it possible to privatize commercial activities while ensuring Government continued presence in the privatized sectors through establishment of strong legal and institutional regulatory frameworks.</li>
-    </ul>
-    <p>Although numerous enterprises were privatized during the first phase, the impact on the economy was limited because:</p>
-    <ul>
-        <li>Most of the enterprises privatized under this Phase were relatively small and self-sufficient,</li>
-        <li>Most of the large companies were considered strategic and therefore not privatized, and</li>
-        <li>The programme had institutional and process weaknesses arising from failure to entrench the procedures and institutional framework in law.</li>
-    </ul>
-    <p>As a result, the Parastatal Reform Programme Committee (PRPC) eventually became dormant while its secretariat (The Executive Secretariat and Technical Unit (ESTU)),which was the administrative organ, was reduced to a skeleton staff following closure of the World Bank Credit under which it was funded. Lack of clearly defined processes and an effective communications strategy also exposed the Programme to accusation of corruption. There was also limited participation by individual Kenyans in most of the transactions due to the transaction methods applied.</p>
-    <p>Under the Economic Recovery Strategy for Wealth and Employment Creation (ERSWEC) 2003-2007, the Government implemented a number of key privatization transactions. These included the Kenya Electricity Generating Company (KenGen) Initial Public Offer (IPO), the concessioning of the Kenya Railways operations, Mumias Sugar Company Second Offer, Kenya Reinsurance Corporation IPO, Sale of 51% Telkom Kenya shareholding to a strategic partner and the Safaricom IPO. Through these transactions, the country mobilized over Kshs.80 billion which was used to support the country’s recovery and overall development agenda.</p>
-    <p>Following expiry of the Economic Recovery Strategy for Wealth and Employment Creation (ERSWEC) 2003-2007, Kenya embarked on implementation of a long term strategy, Vision 2030. On basis of Vision 2030 and its First Medium Term plan for the period 2008 – 2020 the Government focused on four priority areas namely:</p>
-    <ul>
-        <li>Restoring the economy to a higher broad-based long term growth path with expanded opportunities for all Kenyans;</li>
-        <li>Creating employment opportunities for the youth for a more stable and cohesive society;</li>
-        <li>Reducing poverty and inequality through accelerated regional development; and</li>
-        <li>Deepening human capital development efforts to increase productivity and prosperity.</li>
-    </ul>
-    <p>To support the pursuit of these goals, privatization seeks to improve the efficiency and competitiveness of Kenya’s productive resources by subjecting more of Kenya’s production to market forces, mobilizing investment resources for rehabilitation, expanding and modernizing key infrastructure facilities, developing the capital markets and supporting the budget through privatization proceeds and increased taxes. Government is also expected to earn increased dividends from its remaining shareholding as a result of improved performance following enterprise privatization.</p>
-</div>
-</div>
-<div id="benefits" class="tab-content">
-    <h2>Benefits of Privatization</h2>
-    <ul>
-        <li>The improvement of infrastructure and delivery of public services by the involvement of private capital and expertise;</li>
-        <li>The reduction of the demand for government resources;</li>
-        <li>The generation of additional government revenues by receiving compensation for privatizations;</li>
-        <li>The improvement of the regulation of the economy by reducing conflicts between the public sector’s regulatory and commercial functions;</li>
-        <li>The improvement of the efficiency of the Kenyan economy by making it more responsive to market forces;</li>
-        <li>The broadening of the base of ownership in the Kenyan economy; and</li>
-        <li>The enhancement of the capital markets.</li>
-    </ul>
-</div>
-<div id="methods" class="tab-content">
-    <h2>Methods of Privatization</h2>
-    <ul>
-        <li>Negotiated sales resulting from the exercise of pre-emptive rights;</li>
-        <li>Sale of assets, including liquidation;</li>
-        <li>Any other method approved by the Cabinet in the approval of a specific privatization proposal.</li>
-    </ul>
-</div>
-<div id="approved" class="tab-content">
-    <h2>Approved Privatizations</h2>
-    <ul>
-        <li>To be updated.</li>
-    </ul>
-</div>
-<div id="status" class="tab-content">
-    <h2>Privatization Status</h2>
-    <ul>
-        <li>To be updated.</li>
-    </ul>
-</div>
-
-<script>
-    function showContent(tabId) {
-        var contents = document.getElementsByClassName('tab-content');
-        for (var i = 0; i < contents.length; i++) {
-            contents[i].classList.remove('active');
+    <script>
+        function toggleContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                if (content.id === id) {
+                    content.classList.toggle('hidden');
+                } else if (!content.classList.contains('hidden')) {
+                    content.classList.add('hidden');
+                }
+            });
         }
-        document.getElementById(tabId).classList.add('active');
-    }
-</script>
+    </script>
 
+
+
+
+    
 <!-- Footer Start -->
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
     <div class="container">
@@ -501,6 +491,8 @@
                         <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                        
+
                     </div>
                 </div>
             </div>
