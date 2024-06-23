@@ -309,103 +309,153 @@
 <!-- Make sure to include Font Awesome for the dropdown icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         
+        
 <style>
-    .container1 {
-        width: 95%; /* Adjust the width as needed */
-        margin: 50px auto; /* Center the container */
-        border-radius: 10px; /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
-        overflow: hidden; /* Prevents shadow from overflowing */
-        padding: 20px; /* Padding inside the container */
-         /* Background color for better readability */
-        color: #000000;
-    }
-
-    .title {
-        text-align: center;
-        text-decoration: underline;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-
-    .abstract {
-        margin-bottom: 20px;
-    }
-
-    a {
-        color: #000000;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #dddddd;
         
     }
-
-    .section {
-        margin-bottom: 40px; /* Spacing between sections */
+    .container1 {
+        max-width: 800px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 auto; /* Center horizontally */
+        
+    }
+    .header-title {
+        text-align: center;
+        color: #000000;
+        font-size: 24px;
+        margin-bottom: 20px;
+        
+    }
+    .title {
+        color: #000000;
+        font-size: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+    }
+    .dropdown-icon {
+        font-size: 18px;
+        color: #d71920;
+    }
+    .dropdown-content {
+        display: none;
+        padding: 15px;
+        margin-top: 10px;
+    }
+    .dropdown-content a {
+        display: block;
+        color: #000000;
+        text-decoration: none;
+        margin-bottom: 5px;
+    }
+    .dropdown-content a:hover {
+        text-decoration: underline;
+    }
+    .active .dropdown-content {
+        display: block;
     }
 </style>
-</head>
-<body>
 
-<div class="container1">
-    <div class="section">
-        <h2 class="title">Comparative Analysis of Privatisation and Government Divestiture: Challenges and Opportunities</h2>
-        <p class="abstract">
-            The main aim of the analysis was to glean and borrow beneficial privatisation practices from nine selected countries across the world with the intention of availing the gathered information for purposes of the Privatisation Commission learning and improvement. The study explored various theoretical frameworks of privatisation to broaden the understanding of the concept of privatisation. Both cross-sectional and longitudinal study designs were used in this research. Cross section was used to study the practice of privatisation across nine select countries as compared to Kenya. Longitudinal design was used to trace the history, practice and outcome of privatisation in the focus countries of study from the end of World War II to date. The study focused on the US, United Kingdom, Brazil, China, India, Japan, South Africa, Nigeria, and Ghana. Secondary data obtained from literature review was used. Content analysis was done on data collected and presented in narratives and discussions.
-        </p>
-        <p class="abstract">
-            In analyzing the privatisation practices among the countries targeted, eight important variables were used as measures of comparison: objectives of privatisation in each country, history of privatisation, privatisations undertaken, methods of privatisation, processes of privatisation, legal environment of privatisation, challenges of privatisation and privatisation lessons learned from each country under study. The study found out that privatisation is a wave of economic policy that took root in the 1970s starting with the United Kingdom. It came as a result of the realization that governments were not efficient in managing state enterprises due to various reasons and that private individuals who pursue profit motive would be more committed towards the success of enterprises under their ownership. Privatisation was also driven by the assumption that in a perfect market, competition would yield more benefit to the consuming public.
-        </p>
-        <p class="abstract">
-            There are mixed results to the economic policy of privatisation across the world and in individual countries. In some instances, it has produced the desired results, but in some cases, it has failed. Across the studied countries, it was observed that the success or failure of privatisation depended on economic sectors and cultural factors. Each case was however unique to each country. The key determining factors in the success or failure of privatisation seems to rely heavily on the culture of the society in which it is practiced as manifested through governance practices. Privatisation seems to have done well in civilized communities where the well-being of the society is put above those of individuals as opposed to situations where the selfish interest of individuals is allowed to take root. The study ends with a summary of challenges and specific recommendations.
-        </p>
-        <p class="abstract">
-            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Research-Report.pdf" target="_blank">Click here to download the Report</a>
-        </p>
+
+
+<div class="container1" style="margin-top: 40px;">
+    <div class="header-title">ACCESS TO INFORMATION</div>
+    
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>ACCESS TO INFORMATION</span>
+        <span class="dropdown-icon">+</span>
+    </div>
+    <div class="dropdown-content">
+        <a href="https://ss.privatisation.go.ke/site/login" target="_blank">Staff Self-Service</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Access-to-Information-ActNo31of2016.pdf" target="_blank">Access to Information Act No31 of 2016</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Access-to-Information-Officers-1.pdf" target="_blank">Access to Information Officers</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Salary-Scales-of-PC-Employees-by-Grade.pdf" target="_blank">Salary Scales of PC Employees by Grade</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Organisational-Structure.pdf" target="_blank">Organisational Structure</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/DECISION-MAKING-PROCEDURE-AND-CHANNELS-OF-SUPERVISION.pdf" target="_blank">Decision Making Procedure And Channels Of Supervision</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PRIVATIZATION-COMMISSION-FUNCTION-AND-ORGANIZATION.pdf" target="_blank">Privatisation Authority Function and Organization</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC-ATI-Procedure_Website.pdf" target="_blank">PC ATI Procedure</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Privatization-Commission-Budget-2019_2020.pdf" target="_blank">Privatization Commission Budget 2019-2020</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PC-Access-to-Information-Form.pdf" target="_blank">PC Access to Information Form</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/ADDITIONAL-LIST-OF-REGISTERD-SUPPLIERS-NOVEMBER-2020-UPDATE-converted.pdf" target="_blank">ADDITIONAL LIST OF REGISTERED SUPPLIERS-NOVEMBER 2020 UPDATE</a>
     </div>
 
-    <div class="section">
-        <h2 class="title">Enhancement of Corporate Governance through Privatisation</h2>
-        <p class="abstract">
-            The convergence of global economies towards market-based systems has put the modern corporation in the centre of economies around the world. It is becoming increasingly recognized that companies should be managed to reflect the interests of society at large rather than for purely private interests. The positive and negative externalities of the separation of management and ownership in the modern corporation makes corporate governance an important issue. This leads to a number of issues related to efficient control of the assets of corporations in the interest of all stakeholders. Corporate governance is also important for state-owned enterprises (SOEs).
-        </p>
-        <p class="abstract">
-            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/ENHANCEMENT-OF-CORPORATE-GOVERNANCE-THROUGH-PRIVATIZATION.pdf" target="_blank">Click to download document</a>
-        </p>
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>Policies</span>
+        <span class="dropdown-icon">+</span>
+    </div>
+    <div class="dropdown-content">
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Leadership-and-Integrity-Code.pdf" target="_blank">Leadership and Integrity Code</a>
+        <a href="Protection of Whistle-Blowers Policy" target="_blank">Protection of Whistle-Blowers Policy</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Conflict-of-Interest-Policy.pdf" target="_blank">Conflict of Interest Policy</a>
     </div>
 
-    <div class="section">
-        <h2 class="title">Dealing with Resistance to Privatisation</h2>
-        <p class="abstract">
-            As the Privatisation Commission executes its mandate of formulating, managing and implementing the Privatisation Programme, it is likely to encounter resistance from different stakeholders. This is not unique to Kenya as every country that has pursued privatisation as a Government policy has had to deal with resistance to privatisation at one time or the other. A survey carried out by the Center for Global Development in 2002, concluded that “privatisation remains widely unpopular, largely because of the perception that it is fundamentally unfair, both in conception and execution”.
-        </p>
-        <p class="abstract">
-            Opposition to privatisation can come from different stakeholders and groups that include trade unions – including workers and management, consumers, professionals, environmentalists, political groupings and politicians, and community organizations. Resistance to privatisation has taken place in countries at varying levels of national incomes so that the resistance to privatisation is not limited to developing countries.
-        </p>
-        <p class="abstract">
-            Resistance has the potential to delay, dilute or sabotage public enterprise reform in general and privatisation in particular (Nellis, 2003). Despite the resistance, the economic benefits associated with privatisation are widely accepted and can include: improving enterprise efficiency and performance; developing competitive industry which serves consumers well; accessing the capital, know-how and markets which permit growth; achieving effective corporate governance, broadening and deepening capital markets and securing best price possible for the sale.
-        </p>
-        <p class="abstract">
-            In light of the above, this paper seeks to identify the possible reasons for resistance to privatisation and the mitigation measures that can be put in place to deal with the resistance.
-        </p>
-        <p class="abstract">
-            The specific objectives of the paper are: identifying the benefits associated with privatisation based on numerous studies that have been conducted; identifying possible reasons for stakeholder resistance to privatisation; identifying some of the mitigation measure that can be put in place to deal with resistance to privatisations; and proposing recommendations on how to mitigate possible resistance as the Privatisation Commission implements the Privatisation Programme. The paper has extensively reviewed literature on privatisation most of which has been downloaded from the internet.
-        </p>
-        <p class="abstract">
-            Recommendations from the paper include:
-            <ul>
-                <li>Need for a communication strategy for the Privatisation Programme through which stakeholder expectations for privatisation can be managed.</li>
-                <li>Need for enhanced stakeholder consultations during the design of the Privatisation Programme and prior to and during the entire process of implementing privatisation transactions.</li>
-                <li>Inclusion of employee ownership schemes in the privatisation proposals to offer interested employees an ownership in privatised enterprise.</li>
-                <li>Publicizing major activities can enhance public acceptance.</li>
-                <li>The proposed methods of privatisation could as much as possible encourage broad based ownership to gain public and political support.</li>
-                <li>There may be need to ensure that the Commission is underpinned by a strong law that empowers it to overcome opposition from vested interests – this may call for strict enforcement of the existing law or amendment. Such a law could accord the Commission administrative authority that requires entities to be privatised and government ministries to comply with its requirements.</li>
-                <li>The Commission may consider developing a mechanism to monitor institutions post-privatisation that will provide feedback on closed transactions – this will build stakeholder confidence and marshal support to ongoing privatisations.</li>
-                <li>Government may be encouraged to plough back privatisation proceeds into social infrastructure such as hospitals and schools to build public support for privatisation.</li>
-            </ul>
-        </p>
-        <p class="abstract">
-            <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/DEALING-WITH-RESISTANCE-TO-PRIVATIZATION-1.pdf" target="_blank">Click here to download documentation on dealing with resistance to privatisation</a>
-        </p>
+    <div class="title" onclick="toggleDropdown(this)">
+        <span>Procurement Reports</span>
+        <span class="dropdown-icon">+</span>
     </div>
+    <div class="dropdown-content">
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/FINAL-LIST-OF-REGISTERED-SUPPLIERS-FOR-THE-FINANCIAL-YEARS-2023-2024-AND-2024-2025.pdf" target="_blank">FINAL LIST OF REGISTERED SUPPLIERS FOR THE FINANCIAL YEARS 2023-2024 AND 2024-2025</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/NOTIFICATION-OF-REGISTRATION-OF-SUPPLIERS-FOR-THE-FINANCIAL-YEARS-2023-2024-2024-2025.pdff" target="_blank">NOTIFICATION OF REGISTRATION OF SUPPLIERS FOR THE FINANCIAL YEARS 2023 – 2024 & 2024 – 2025</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-31.12.2023-Q2-FY-2023-2024.pdf" target="_blank">CONTRACTS STATUS REPORT AS AT 31.12.2023 (Q2 FY 2023-2024)</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-21.03.2024-Q3FY-2023-2024-21.03.2024.pdf" target="_blank">CONTRACTS STATUS REPORT AS AT 21.03.2024 (Q3FY 2023-2024) 21.03.2024</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/PROCUREMENT-CONTRACTS-AWARDS-Q2-2023-2024.pdf" target="_blank">PROCUREMENT CONTRACTS AWARDS Q2 2023 – 20242</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/PROCUREMENT-CONTRACTS-AWARDS-Q3-2023-2024-09.01.2024.pdf" target="_blank">PROCUREMENT CONTRACTS AWARDS Q3 2023 – 2024 09.01.2024</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.06.2021.pdf" target="_blank">CONTRACTS STATUS AS AT 30.06.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.09.2020.pdf" target="_blank">CONTRACTS STATUS AS AT 30.09.2020</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.06.2022.pdf" target="_blank">CONTRACTS STATUS AS AT 30.06.2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30.09.2021.pdf" target="_blank">CONTRACTS STATUS AS AT 30.09.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.03.2022-1.pdf">CONTRACTS STATUS AS AT 31.03.2022 (1)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.03.2021.pdf">CONTRACTS STATUS AS AT 31.03.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-31.12.2020_0.pdf">CONTRACTS STATUS AS AT 31.12.2020_0</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-AS-AT-30062020_0.pdf">CONTRACTS STATUS AS AT 30062020_0</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/CONTRACTS-STATUS-REPORT-AS-AT-30.06.2023-Q4-FY-2022-2023-10.07.2023-1.pdf">CONTRACTS STATUS REPORT AS AT 30.06.2023 (Q4 FY 2022-2023) 10.07.2023 (1)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/NOTIFICATION-OF-REGISTRATION-OF-SUPPLIERS-FOR-THE-PERIOD-2021-2023-O2.12.2021.pdf">NOTIFICATION OF REGISTRATION OF SUPPLIERS FOR THE PERIOD 2021 – 2023 O2.12.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-REPORT-FOR-Q1-2021-2022-15.10.2021.pdf">PROCUREMENT AWARDS REPORT FOR Q1 2021 – 2022 15.10.2021</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-FOR-THE-PERIOD-1ST-JULY-30TH-SEPTEMBER-2022.pdf">PROCUREMENT AWARDS FOR THE PERIOD 1ST JULY – 30TH SEPTEMBER 2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-FOR-THE-PERIOD-1ST-APRIL-2022-30TH-JUNE-2022-Q4.pdf">PROCUREMENT AWARDS FOR THE PERIOD 1ST APRIL 2022 – 30TH JUNE 2022 (Q4)</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/PROCUREMENT-AWARDS-REPORT-FOR-Q2-2021-2022-14.01.2022.pdf">PROCUREMENT AWARDS REPORT FOR Q2 2021 – 2022 14.01.2022</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q3-2021-2022-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-MARCH-2021-for-uploading.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT 31.12.2022Q3 2021-2022 FY</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q4-2022-2023-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-30.06.2023.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT MARCH 2021 – for uploadingQ3 2022-2023 FY</a>
+        <a href="https://bt1.pc.go.ke/wp-content/uploads/2023/11/Q3-2021-2022-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-MARCH-2021-for-uploading.pdf">PROCUREMENT PLAN IMPLEMENTATION REPORT 31.12.2022 (1)Q4 2022-2023 FY</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Q4-2022-2023-FY-PROCUREMENT-PLAN-IMPLEMENTATION-REPORT-30.06.2023.pdf">Q4 2022-2023 FY PROCUREMENT PLAN IMPLEMENTATION REPORT 30.06.2023</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q1-2020-2021-15.10.2020.pdf">CONTRACTS AWARDED IN Q1 2020 – 2021 15.10.2020</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Contract-Progress-Report-as-at-30-06-2019-4th-Qtr-Report-2018-2019.pdf">Contract Progress Report as at 30-06-2019 – 4th Qtr Report 2018 – 2019</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/Contract-Progress-Report-as-at-30.09-2019-1st-Quarter-Report-2019-2020.pdf">Contract Progress Report as at 30.09-2019 – 1st Quarter Report 2019-2020</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q2-2020-2021-22.01.2021.pdf">CONTRACTS AWARDED IN Q2 2020 – 2021 22.01.2021</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q3-2020-2021.pdf">CONTRACTS AWARDED IN Q3 2020 – 2021</a>
+        <a href="https://privatisation.go.ke/wp-content/uploads/2023/11/CONTRACTS-AWARDED-IN-Q4-2020-2021-FINANCIAL-YEAR.pdf">CONTRACTS AWARDED IN Q4 2020-2021 FINANCIAL YEAR</a>
 </div>
+
+<script>
+    function toggleDropdown(element) {
+        const dropdownContent = element.nextElementSibling;
+        const icon = element.querySelector('.dropdown-icon');
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+            icon.textContent = "+";
+        } else {
+            dropdownContent.style.display = "block";
+            icon.textContent = "-";
+        }
+    }
+</script>
+  
+
+
 
 <!-- Footer Start -->
 <div class="footer wow fadeIn" data-wow-delay="0.3s">
@@ -422,6 +472,8 @@
                         <a href="https://web.facebook.com/privatisationauthority"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/privatisationauthority/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/company/privatizationke/?originalSubdomain=ke"><i class="fab fa-linkedin-in"></i></a>
+                        
+
                     </div>
                 </div>
             </div>
@@ -494,6 +546,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
         <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
+
     </body>
 </html>
+
+
+
+
